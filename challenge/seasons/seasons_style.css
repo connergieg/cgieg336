@@ -1,0 +1,68 @@
+body {
+    background-color: black;
+}
+
+h1 {
+    text-align: center;
+    font-family: "Lobster", cursive;
+    color: yellow;
+}
+
+.image:hover {
+    width: 400px;
+    height: 250px;
+}
+
+#spring {
+    border-top-left-radius: 50px;
+}
+
+#summer {
+    border-top-right-radius: 50px;
+}
+
+#fall {
+    border-bottom-left-radius: 50px;
+}
+
+#winter {
+    border-bottom-right-radius: 50px;
+}
+
+#main {
+    text-align: center;
+}
+
+#springTitle {
+    display: inline-block;
+    position: relative;
+    right: 130px;
+}
+
+#summerTitle {
+    display: inline-block;
+    position: relative;
+    left: 130px;
+}
+
+#fallTitle {
+    display: inline-block;
+    position: relative;
+    right: 130px;
+}
+
+#winterTitle {
+    display: inline-block;
+    position: relative;
+    left: 130px;
+}
+
+.whiteWebFont {
+    color: white;
+    font-family: "Lobster", cursive;
+}
+
+#line {
+    position: relative;
+    bottom: 10px;
+}
