@@ -1,0 +1,138 @@
+body {
+    background-color: gray;
+    margin: 0 auto;
+    background-image: url("https://photoshopstar.com/tutorials/22/03.gif")
+}
+
+h1 {
+    font-family: 'Chewy', cursive;
+    font-size: 3em;
+    text-shadow: 3px 4px black;
+    color: purple;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+#orderHeader {
+    font-weight: normal;
+    font-style: italic;
+}
+
+h3 {
+    position: relative;
+    top: 30%;
+    font-weight: normal;
+}
+
+fieldset {
+    width: 300px;
+    margin: 0 auto;
+}
+
+form {
+    background-color: lightgray;
+    width: 400px;
+    height: 600px;
+    padding-top: 10px;
+    border-radius: 50px;
+    display: inline-block;
+    text-align: left;
+    margin-right: 100px;
+}
+
+#main {
+    /*border: 1px solid red;*/
+    display: flex;
+    justify-content: center;
+}
+
+#results {
+    background-color: lightgray;
+    width: 600px;
+    height: 800px;
+    padding-top: 30px;
+    border-radius: 50px;
+    display: inline-block;
+    /*border: 1px solid blue;*/
+}
+
+div {
+    text-align: center;
+}
+
+#pizza {
+    display: inline-block;
+    position: relative;
+    left: 0;
+    top: 0;
+}
+
+.img {
+    position: relative;
+    left: 0;
+    top: 0;
+}
+
+.img1 {
+    position: absolute;
+    top: 60px;
+    left: 100px;
+}
+
+.img2 {
+    position: absolute;
+    top: 110px;
+    left: 100px;
+}
+
+.img3 {
+    position: absolute;
+    top: 160px;
+    left: 100px;
+}
+
+.img4 {
+    position: absolute;
+    top: 202px;
+    left: 100px;
+}
+
+input[type=submit] {
+    font-size: 1.5em;
+    border-radius: 15px;
+    background-color: lightgreen;
+    margin-top: 30px;
+}
+
+.errorMessage {
+    color: red;
+    float: right;
+}
+
+hr {
+    width: 50%;
+}
+
+#csumbLogo {
+    margin-right: 20px;
+}
+
+#footerText {
+    text-align: left;
+    color: navy;
+}
+
+#csumbLogo, #footerText {
+    float: left;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+}
+
+#bottomLine {
+    margin-top: 50px;
+}
