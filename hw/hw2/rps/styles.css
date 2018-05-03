@@ -1,0 +1,80 @@
+body {
+    background-color: #1E1E1E;
+}
+
+header {
+    text-align: center;
+    color: white;
+}
+
+h4 {
+    color: gray;
+}
+
+.rightside {
+    position: absolute;
+    top: 10px;
+    right: 200px;
+    font-size: 18px;
+}
+
+.winner {
+    color: green;
+}
+
+.nowinner {
+    color: red;
+}
+
+#info {
+    width: 400px;
+    padding-left: 20px;
+    text-align: left;
+    border: 1px solid lightgray;
+    position: relative;
+    bottom: 350px;
+    left: 75px;
+}
+
+figure {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 50px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+}
+
+#about {
+    text-align: center;
+}
+
+#about a {
+    font-size: 1.3em;
+    color: gray; 
+    text-decoration: none;
+}
+
+#about a:hover {
+    color: red;
+    text-decoration: underline;
+    text-decoration-color: blue;
+    font-size: 1.5em;
+}
+
+#csumbLogo {
+    margin-right: 20px;
+}
+
+#footerText {
+    color: gray;
+}
+
+hr {
+    margin-top: 20px;
+    width: 50%;
+    margin-bottom: 20px;
+}
