@@ -1,0 +1,54 @@
+    body{
+        opacity:0.9;
+        width:100%;
+        text-align:center;
+        color:yellow;
+    }
+    
+    input {
+        font-size: 1.5em;
+        color: black;
+    }
+    
+    input[type=submit], input[type=text] {
+        border-radius: 50px;
+    }
+    
+    input[type=submit] {
+        margin-top: 20px;
+        margin-bottom: 40px;
+        background-color: green;
+    }
+    
+    input[type=text] {
+        padding-left: 10px;
+    }
+    
+    select {
+        font-size: 1.2em;
+        margin-top: 5px;
+    }
+    
+    #section {
+        display: inline-block;
+        background-color: lightgray;
+        color: black;
+        border-radius: 10px;
+        font-style: italic;
+        text-align: left;
+        height: 80px;
+        width: 115px;
+        margin-top: 35px;
+        padding: 10px;
+    }
+    
+    h3 {
+        position: relative;
+        right: 70px;
+        top: 20px;
+    }
+    
+    #carousel-example-generic {
+         margin: 0 auto;   
+         width: 700px;
+    }
