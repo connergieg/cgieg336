@@ -22,7 +22,7 @@
         $_SESSION["tries"] = 1;
     }
     
-    echo $_SESSION["randNum"];
+    // echo $_SESSION["randNum"];
     
     function displayComparison() {
         if (isset($_GET["guess"])) {
@@ -37,7 +37,7 @@
                 echo "<span> Guesses History </span> <br>";
                 for ($i = 0; $i < count($_SESSION["numbersGuessed"]); $i++) {
                     echo "You guessed the numbers " . $_SESSION["numbersGuessed"][$i];
-                    echo " in " . $_SESSION["numTries"][$i] . "<br>";
+                    echo " in " . $_SESSION["numTries"][$i] . " attempts <br>";
                 }
                 echo "<div>";
                 unset($_SESSION["randNum"]);
@@ -87,7 +87,7 @@
             Guess: <input type="number" name="guess" size="4"> <br> <br>
                 <input type="submit" value="Guess Number">
         </form>
-        
+        <br>
         <form class="sameLine">
             <input type="submit" name="giveUp" value="Give Up">
         </form>
