@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hangman</title>
+        <link  href="css/styles.css" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        
+    </head>
+    <body>
+        <div class='container text-center'>
+            <header>
+                <h1>Hangman</h1>
+                <h4>JavaScript Edition</h4>
+            </header>
+            
+            <div id="word"></div>
+            
+            <button id="hintBtn"> Hint </button>
+            <p id="hintText"></p>
+            
+            <p id="remainGuess"></p>
+            
+            <div id="letters"></div>
+            
+            <div id="winner">
+                <h2> You won! </h2>
+                <button class="replayBtn btn btn-success"> Play Again? </button>
+            </div>
+            <div id="loser">
+                <h2> You lost :( </h2>
+                <button class="replayBtn btn btn-warning"> Play Again? </button>
+            </div>
+            <div id="man">
+                <img src="img/stick_0.png" id="hangImg">
+            </div>
+            
+            <div id="wordHistory">
+                Words Guessed:
+            </div>
+        </div>
+        
+        <script>
+            
+            //VARIABLES
+            var selectedWord = "";
+            var selectedHint = "";
+            var board = []; //array
+            // var board = new Array;
+            var remainingGuesses = 6;
+            // var words = ["snake", "monkey", "beetle", "horse", "dog"];
+            var words = [{word: "snake", hint: "It's a reptile"},
+                        {word: "monkey", hint: "It's a mammal"},
+                        {word: "beetle", hint: "It's an insect"}];
+                        
+            $(".replayBtn").click(function() {
+                // alert("Replay");
+                board = []; //array
+                remainingGuesses = 6;
+                startGame();
+                updateMan();
+                $(".letter").attr("class", "letter btn btn-success");
+                $(".letter").attr("disabled", false);
+                $("#hintBtn").css("display", "inline");
+                $("#hintText").html("");
+                $("#letters").css("display", "block");
+                $("#loser").css("display", "none");
+                $("#winner").css("display", "none");
+                $("#remainGuess").css("display", "block");
+                $("#remainGuess").html("Remaining guesses: " + remainingGuesses);
+            });
+            
+            //EVENTS
+            window.onload = startGame();
+            
+            //document.getElementById("letterBtn")
+            
+            //FUNCTIONS
+            function startGame() {
+                pickWord();
+                initBoard();
+                updateBoard();
+            }
+            
+            function pickWord() {
+                var randomInt = Math.floor(Math.random() * words.length);
+                selectedWord = words[randomInt].word;
+                selectedHint = words[randomInt].hint;
+            }
+            
+            function initBoard() {
+                for (var letter in selectedWord) {
+                    board.push("_");
+                }
+            }
+            
+            function updateBoard() {
+                $("#word").empty();
+                
+                for (var letter of board) {
+                    document.getElementById("word").innerHTML += letter + " ";
+                }
+            }
+            
+            $("#remainGuess").html("Remaining guesses: " + remainingGuesses);
+            
+            function checkLetter(letter) {
+                var positions = [];
+                for (var i = 0; i < selectedWord.length; i++) {
+                    if (selectedWord[i] == letter.toLowerCase()) {
+                        positions.push(i);
+                    }
+                }
+                
+               if (positions.length > 0) {
+                    updateWord(positions, letter);
+                    
+                    if (!board.includes("_")) {
+                        $("#winner").css("display", "block");
+                        $("#hintBtn").css("display", "none");
+                        $("#hintText").html("Hint: " + selectedHint);
+                        $("#letters").css("display", "none");
+                        $("#wordHistory").append(selectedWord + "<br>");
+                        $("#wordHistory").css("display", "block");
+                        $("#remainGuess").css("display", "none");
+                    }
+                }
+                else {
+                    remainingGuesses -= 1;
+                    updateMan();
+                }
+                if (remainingGuesses <= 0) {
+                    $("#loser").css("display", "block");
+                    $("#hintBtn").css("display", "none");
+                    $("#hintText").html("Hint: " + selectedHint);
+                    $("#letters").css("display", "none");
+                    $("#remainGuess").css("display", "none");
+                }
+                $("#remainGuess").html("Remaining guesses: " + remainingGuesses);
+            }
+            
+            $("#hintBtn").click(function() {
+                remainingGuesses -= 1;
+                $("#remainGuess").html("Remaining guesses: " + remainingGuesses);
+                $("#hintBtn").css("display", "none");
+                $("#hintText").html("Hint: " + selectedHint);
+            })
+            
+            function updateMan() {
+                if (remainingGuesses >= 0){
+                    $("#hangImg").attr("src", "img/stick_" + (6 - remainingGuesses) + ".png");
+                }
+            }
+            
+            function updateWord(positions, letter) {
+                for (var pos of positions) {
+                    board[pos] = letter;
+                }
+                updateBoard();
+            }
+            
+            var alphabet =["A", "B", "C", "D", "E", "F", "G", "H", 
+            "I", "J", "K", "L", "M", "N", "O", 
+            "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+            
+            for (var letter of alphabet) {
+                $("#letters").append("<button class='letter btn btn-success' value ='" + letter + "'>" + letter + "</button> ");
+            }
+            
+            $(".letter").click(function() {
+                $(this).attr("class", "letter btn btn-danger");
+                $(this).attr("disabled", true);
+                checkLetter($(this).attr("value"));
+            });
+        
+        </script>
+    </body>
+</html>

@@ -1,0 +1,22 @@
+#loser, #winner, #wordHistory {
+    display: none;
+}
+
+#word, #letters {
+    padding: 20px 0px;
+}
+
+#man {
+    margin: 20px auto;
+    border: 1px solid black;
+    width: 600px;
+    height: 600px;
+}
+
+#word {
+    font-size: 1.8em;
+}
+
+.btn {
+    padding: 7px 7px !important;
+}
