@@ -1,0 +1,90 @@
+[23-May-2018 02:46:41 UTC] PHP Warning:  include(../../../dbConnection.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/cgieg336/practice/findGolfProducts/brandName.php on line 2
+[23-May-2018 02:46:41 UTC] PHP Stack trace:
+[23-May-2018 02:46:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/cgieg336/practice/findGolfProducts/brandName.php:0
+[23-May-2018 02:46:41 UTC] PHP Warning:  include(): Failed opening '../../../dbConnection.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/cgieg336/practice/findGolfProducts/brandName.php on line 2
+[23-May-2018 02:46:41 UTC] PHP Stack trace:
+[23-May-2018 02:46:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/cgieg336/practice/findGolfProducts/brandName.php:0
+[23-May-2018 02:46:41 UTC] PHP Fatal error:  Call to undefined function getDatabaseConnection() in /home/ubuntu/workspace/cgieg336/practice/findGolfProducts/brandName.php on line 3
+[23-May-2018 02:46:41 UTC] PHP Stack trace:
+[23-May-2018 02:46:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/cgieg336/practice/findGolfProducts/brandName.php:0
+[23-May-2018 02:47:54 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'A' in 'where clause'' in /home/ubuntu/workspace/cgieg336/practice/findGolfProducts/brandName.php:12
+Stack trace:
+#0 /home/ubuntu/workspace/cgieg336/practice/findGolfProducts/brandName.php(12): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cgieg336/practice/findGolfProducts/brandName.php on line 12
+[23-May-2018 02:48:20 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'A' in 'where clause'' in /home/ubuntu/workspace/cgieg336/practice/findGolfProducts/brandName.php:14
+Stack trace:
+#0 /home/ubuntu/workspace/cgieg336/practice/findGolfProducts/brandName.php(14): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cgieg336/practice/findGolfProducts/brandName.php on line 14
+[23-May-2018 02:49:20 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'A' in 'where clause'' in /home/ubuntu/workspace/cgieg336/practice/findGolfProducts/brandName.php:14
+Stack trace:
+#0 /home/ubuntu/workspace/cgieg336/practice/findGolfProducts/brandName.php(14): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cgieg336/practice/findGolfProducts/brandName.php on line 14
+[23-May-2018 02:51:29 UTC] PHP Parse error:  syntax error, unexpected '$stmt' (T_VARIABLE) in /home/ubuntu/workspace/cgieg336/practice/findGolfProducts/brandName.php on line 12
+[23-May-2018 02:52:41 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'A' in 'where clause'' in /home/ubuntu/workspace/cgieg336/practice/findGolfProducts/brandName.php:13
+Stack trace:
+#0 /home/ubuntu/workspace/cgieg336/practice/findGolfProducts/brandName.php(13): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cgieg336/practice/findGolfProducts/brandName.php on line 13
+[23-May-2018 02:53:05 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'A' in 'where clause'' in /home/ubuntu/workspace/cgieg336/practice/findGolfProducts/brandName.php:13
+Stack trace:
+#0 /home/ubuntu/workspace/cgieg336/practice/findGolfProducts/brandName.php(13): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cgieg336/practice/findGolfProducts/brandName.php on line 13
+[23-May-2018 02:53:54 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'A' in 'where clause'' in /home/ubuntu/workspace/cgieg336/practice/findGolfProducts/brandName.php:15
+Stack trace:
+#0 /home/ubuntu/workspace/cgieg336/practice/findGolfProducts/brandName.php(15): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cgieg336/practice/findGolfProducts/brandName.php on line 15
+[23-May-2018 02:54:26 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'A' in 'where clause'' in /home/ubuntu/workspace/cgieg336/practice/findGolfProducts/brandName.php:13
+Stack trace:
+#0 /home/ubuntu/workspace/cgieg336/practice/findGolfProducts/brandName.php(13): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cgieg336/practice/findGolfProducts/brandName.php on line 13
+[23-May-2018 02:55:41 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'A' in 'where clause'' in /home/ubuntu/workspace/cgieg336/practice/findGolfProducts/brandName.php:13
+Stack trace:
+#0 /home/ubuntu/workspace/cgieg336/practice/findGolfProducts/brandName.php(13): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cgieg336/practice/findGolfProducts/brandName.php on line 13
+[23-May-2018 02:57:42 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%A%' at line 2' in /home/ubuntu/workspace/cgieg336/practice/findGolfProducts/brandName.php:13
+Stack trace:
+#0 /home/ubuntu/workspace/cgieg336/practice/findGolfProducts/brandName.php(13): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cgieg336/practice/findGolfProducts/brandName.php on line 13
+[23-May-2018 02:58:06 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%A' at line 2' in /home/ubuntu/workspace/cgieg336/practice/findGolfProducts/brandName.php:13
+Stack trace:
+#0 /home/ubuntu/workspace/cgieg336/practice/findGolfProducts/brandName.php(13): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cgieg336/practice/findGolfProducts/brandName.php on line 13
+[23-May-2018 02:58:19 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%' at line 2' in /home/ubuntu/workspace/cgieg336/practice/findGolfProducts/brandName.php:13
+Stack trace:
+#0 /home/ubuntu/workspace/cgieg336/practice/findGolfProducts/brandName.php(13): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cgieg336/practice/findGolfProducts/brandName.php on line 13
+[23-May-2018 02:58:21 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%' at line 2' in /home/ubuntu/workspace/cgieg336/practice/findGolfProducts/brandName.php:13
+Stack trace:
+#0 /home/ubuntu/workspace/cgieg336/practice/findGolfProducts/brandName.php(13): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cgieg336/practice/findGolfProducts/brandName.php on line 13
+[23-May-2018 03:00:33 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%' at line 2' in /home/ubuntu/workspace/cgieg336/practice/findGolfProducts/brandName.php:13
+Stack trace:
+#0 /home/ubuntu/workspace/cgieg336/practice/findGolfProducts/brandName.php(13): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cgieg336/practice/findGolfProducts/brandName.php on line 13
+[23-May-2018 03:00:49 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%' at line 2' in /home/ubuntu/workspace/cgieg336/practice/findGolfProducts/brandName.php:13
+Stack trace:
+#0 /home/ubuntu/workspace/cgieg336/practice/findGolfProducts/brandName.php(13): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cgieg336/practice/findGolfProducts/brandName.php on line 13
+[23-May-2018 03:03:46 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%' at line 3' in /home/ubuntu/workspace/cgieg336/practice/findGolfProducts/brandName.php:14
+Stack trace:
+#0 /home/ubuntu/workspace/cgieg336/practice/findGolfProducts/brandName.php(14): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cgieg336/practice/findGolfProducts/brandName.php on line 14
+[23-May-2018 03:03:58 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%' at line 3' in /home/ubuntu/workspace/cgieg336/practice/findGolfProducts/brandName.php:14
+Stack trace:
+#0 /home/ubuntu/workspace/cgieg336/practice/findGolfProducts/brandName.php(14): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cgieg336/practice/findGolfProducts/brandName.php on line 14
